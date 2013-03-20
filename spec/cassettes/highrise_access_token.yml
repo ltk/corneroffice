@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://launchpad.37signals.com/authorization/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=authorization_code&code=valid-auth-code&client_id=client-id&client_secret=client-secret&type=web_server&redirect_uri=http%3A%2F%2Fcorneroffice.dev%2Fuser%2Fnew
+    headers:
+      User-Agent:
+      - Faraday v0.8.6
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 20 Mar 2013 20:05:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Etag:
+      - ! '"5df311144897ebca71b48b656cf4c613"'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.009121'
+      Set-Cookie:
+      - _launchpad_session=BAh7BiIPc2Vzc2lvbl9pZCIlYTVjY2I4Yjg4Y2Q0ZDkyMjg0ZDBkYzc5NTQxYmFjZWQ%3D--46fa0f295a360753c8e28690b4b9849be868fc02;
+        path=/; HttpOnly
+      Cache-Control:
+      - no-store
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: US-ASCII
+      string: ! '{"refresh_token":"refresh-token","expires_in":1209600,"access_token":"big-long-token"}'
+    http_version: 
+  recorded_at: Wed, 20 Mar 2013 20:05:37 GMT
+recorded_with: VCR 2.4.0

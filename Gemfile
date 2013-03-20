@@ -2,8 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'pg'
+gem 'simplest_auth', '~>0.3.1'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'oauth2'
+gem 'highrise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -22,4 +25,6 @@ end
 group :test do
   gem 'capybara'
   gem 'simplecov'
+  gem 'vcr'
+  gem 'webmock'
 end

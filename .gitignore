@@ -2,9 +2,11 @@
 /.bundle
 
 config/database.yml
+config/highrise.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
 
 .DS_Store
+/coverage

@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://launchpad.37signals.com/authorization/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=authorization_code&code=valid-auth-code&client_id=client-code&client_secret=client-secret&type=web_server&redirect_uri=http%3A%2F%2Fcorneroffice.dev%2Fuser%2Fnew
+    headers:
+      User-Agent:
+      - Faraday v0.8.6
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 20 Mar 2013 19:47:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 400 Bad Request
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.004643'
+      Set-Cookie:
+      - _launchpad_session=BAh7BiIPc2Vzc2lvbl9pZCIlNDk1YTRiNGE1OTBlNDk2ODE2YjdmZjBjODE2NGE1N2E%3D--3086c70d07b69cbf5ae42642e4ec2a547f333667;
+        path=/; HttpOnly
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"expired_verification_code"}'
+    http_version: 
+  recorded_at: Wed, 20 Mar 2013 19:47:43 GMT
+recorded_with: VCR 2.4.0
